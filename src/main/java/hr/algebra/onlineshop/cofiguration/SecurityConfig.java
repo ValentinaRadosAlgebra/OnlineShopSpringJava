@@ -53,7 +53,7 @@ public class SecurityConfig {
     public SecurityFilterChain apiSecurity(HttpSecurity http)  {
         return http
                 .securityMatcher("/api/**")
-//                .csrf(csrf -> csrf.disable()) //sonarQube set up as issue -> couldn't find solution so comment
+                .csrf(csrf -> csrf.disable()) //sonarQube set up as issue -> couldn't find solution so comment
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )

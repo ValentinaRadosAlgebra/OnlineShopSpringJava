@@ -166,7 +166,6 @@
         <div class="row">
             <div class="col-md-6">
                 <form th:action="@{/mvc/cart/checkout}" method="post">
-
                     <div class="form-group">
                         <label for="selectPayment">Payment Method</label>
                         <select id="selectPayment" class="form-control" name="paymentMethod">
@@ -182,10 +181,9 @@
                 </form>
             </div>
 
-            <div class="col-md-6 text-right">
-                <form th:action="@{/mvc/cart/clear}"  method="post">
-
-                    <button class="btn btn-warning">
+            <div class="col-md-6 d-flex justify-content-end align-items-start">
+                <form th:action="@{/mvc/cart/clear}" method="post">
+                    <button class="btn btn-warning mt-4">
                         Clear Cart
                     </button>
                 </form>
