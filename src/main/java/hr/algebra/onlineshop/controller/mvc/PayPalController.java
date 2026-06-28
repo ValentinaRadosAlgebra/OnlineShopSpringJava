@@ -24,6 +24,7 @@ public class PayPalController {
     private static final String PAYMENT_ERROR = "paymentError";
     @Value("${paypal.success-url}")
     private String successUrl;
+
     @Value("${paypal.cancel-url}")
     private String cancelUrl;
 
@@ -40,8 +41,8 @@ public class PayPalController {
                     method,
                     "sale",
                     "Online Shop Purchase",
-                    successUrl,
-                    cancelUrl
+                    cancelUrl,
+                    successUrl
             );
             return getApprovalUrl(payment);
         } catch (PayPalRESTException e) {
